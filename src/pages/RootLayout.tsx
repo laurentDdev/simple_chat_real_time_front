@@ -13,6 +13,7 @@ const RootLayout = () => {
         if (token === 'EXPIRED') {
             localStorage.removeItem("token")
             localStorage.removeItem("expiration")
+            localStorage.removeItem("userData")
             return;
         }
 
@@ -22,6 +23,7 @@ const RootLayout = () => {
         setTimeout(() => {
             localStorage.removeItem("token")
             localStorage.removeItem("expiration")
+            localStorage.removeItem("userData")
         }, tokenDuration);
     }, [token]);
 
